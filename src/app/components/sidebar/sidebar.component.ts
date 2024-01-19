@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  constructor(private messageService: MessageService) {}
+
+  show() {
+      this.messageService.add({ severity: 'info', summary: 'Info', detail: 'Cette partie est en cours...' });
+  }
 }

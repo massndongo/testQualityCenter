@@ -8,6 +8,9 @@ import { DxMenuModule } from "devextreme-angular";
 import { OverviewComponent } from './components/overview/overview.component';
 import { AnalyseComponent } from './components/analyse/analyse.component';
 import { VenteComponent } from './components/vente/vente.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,14 @@ import { VenteComponent } from './components/vente/vente.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    DxMenuModule
+    DxMenuModule,
+    ToastModule
   ],
-  providers: [],
+  providers: [
+    MessageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

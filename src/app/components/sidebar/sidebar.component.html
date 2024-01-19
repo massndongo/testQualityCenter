@@ -27,14 +27,14 @@
       <section aria-labelledby="products-heading" class="pb-24 pt-6">
 
         <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-          <form class="lg:block">
+          <form class="lg:block mt-4">
 
             <div class=" border-gray-200 py-6">
               <h3 class="-my-3 flow-root">
                 <!-- Expand/collapse section button -->
                 <a type="button" routerLink="/overview" class="flex w-full items-center justify-center bg-white rounded-lg py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
                   <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/aperçu-gris-menu-icon.png" alt="" srcset="">
-                  <span class="ml-2 text-2xl text-gray-600">Aperçu</span>
+                  <span class="ml-2 text-2xl text-gray-600 hover:text-blue-600">Aperçu</span>
                 </a>
               </h3>
               <!-- Filter section, show/hide based on section state. -->
@@ -44,8 +44,8 @@
               <h3 class="-my-3 flow-root">
                 <!-- Expand/collapse section button -->
                 <a type="button" routerLink="/ventes" class="flex w-full items-center justify-center bg-white rounded-lg py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
-                  <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/aperçu-gris-menu-icon.png" alt="" srcset="">
-                  <span class="ml-2 text-2xl text-gray-600">Ventes</span>
+                  <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/ventes-gris-menu-icon.png" alt="" srcset="">
+                  <span class="ml-2 text-2xl text-gray-600 hover:text-blue-600">Ventes</span>
                 </a>
               </h3>
               <!-- Filter section, show/hide based on section state. -->
@@ -53,12 +53,14 @@
             </div>
             <div class=" border-gray-200 py-6">
               <h3 class="-my-3 flow-root">
+                <p-toast></p-toast>
                 <!-- Expand/collapse section button -->
-                <a type="button" routerLink="/analyses" class="flex w-full items-center justify-center bg-white rounded-lg py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
-                  <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/aperçu-gris-menu-icon.png" alt="" srcset="">
-                  <span class="ml-2 text-2xl text-gray-600">Analyses</span>
+                <a type="button" (click)="show()" class="flex w-full items-center justify-center bg-white rounded-lg py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
+                  <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/analyses-gris-menu-icon.png" alt="" srcset="">
+                  <span class="ml-2 text-2xl text-gray-600 hover:text-blue-600">Analyses</span>
                 </a>
               </h3>
+
               <!-- Filter section, show/hide based on section state. -->
 
             </div>

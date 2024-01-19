@@ -1,26 +1,76 @@
-<main class="main">
-    <aside class="sidebar">
-      <nav class="nav">
-        <ul>
-            <li>
-                <a routerLink="" rel="noopener noreferrer">
-                    <img class="logo" src="../../../assets/logo.png" alt="" srcset="">
+<div class="bg-transparent bg h-screen">
+  <div>
+
+    <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-baseline justify-between pt-24">
+        <img src="../../../assets/logo.png" alt="" srcset="" class="w-[20%]">
+
+        <div class="flex items-center bg-red">
+          <div class="relative inline-block">
+            <div class="mr-2">
+              <button type="button" class="group inline-flex justify-center rounded-full bg-white" id="menu-button" aria-expanded="false" aria-haspopup="true">
+                <img class="m-4 h-8 w-8 flex-shrink-0" src="../../../assets/notification-icon.png" alt="" srcset="">
+              </button>
+            </div>
+          </div>
+
+          <button type="button" class="group inline-flex justify-center rounded-full bg-white" id="menu-button" aria-expanded="false" aria-haspopup="true">
+            <img class="m-4 h-8 w-8 flex-shrink-0" src="../../../assets/notification-icon.png" alt="" srcset="">
+          </button>
+          <div class="flex flex-col text-[16px] text-gray-600 ml-4">
+            <span>Massam Ndongo</span>
+            <span class="font-bold">Developpeur Web</span>
+          </div>
+        </div>
+      </div>
+
+      <section aria-labelledby="products-heading" class="pb-24 pt-6">
+
+        <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
+          <form class="lg:block">
+
+            <div class=" border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <a type="button" routerLink="/overview" class="flex w-full items-center justify-center bg-white rounded-lg py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
+                  <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/aperçu-gris-menu-icon.png" alt="" srcset="">
+                  <span class="ml-2 text-2xl text-gray-600">Aperçu</span>
                 </a>
-            </li>
-          <li><a routerLink="/overview">
-            <img class="icon" src="../../../assets/logo.png" alt="" srcset="">
-            <span>Aperçu</span>
-          </a></li>
-          <li><a routerLink="/container//ventes">
-            <img class="icon" src="../../../assets/aperçu-gris-menu-icon.png" alt="" srcset="">
-            <span>Ventes</span>
-          </a></li>
-          <li><a routerLink="/container/analyses">
-            <img class="icon" src="../../../assets/ventes-gris-menu-icon.png" alt="" srcset="">
-            <span>Analyses</span>
-          </a></li>
-        </ul>
-      </nav>
-    </aside>
-  </main>
-  <router-outlet></router-outlet>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+
+            </div>
+            <div class=" border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <a type="button" routerLink="/ventes" class="flex w-full items-center justify-center bg-white rounded-lg py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
+                  <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/aperçu-gris-menu-icon.png" alt="" srcset="">
+                  <span class="ml-2 text-2xl text-gray-600">Ventes</span>
+                </a>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+
+            </div>
+            <div class=" border-gray-200 py-6">
+              <h3 class="-my-3 flow-root">
+                <!-- Expand/collapse section button -->
+                <a type="button" routerLink="/analyses" class="flex w-full items-center justify-center bg-white rounded-lg py-3 text-sm text-gray-400 hover:text-gray-500" aria-controls="filter-section-0" aria-expanded="false">
+                  <img class="mr-2 h-8 w-8 flex-shrink-0" src="../../../assets/aperçu-gris-menu-icon.png" alt="" srcset="">
+                  <span class="ml-2 text-2xl text-gray-600">Analyses</span>
+                </a>
+              </h3>
+              <!-- Filter section, show/hide based on section state. -->
+
+            </div>
+
+          </form>
+
+          <!-- Product grid -->
+          <div class="lg:col-span-3">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>

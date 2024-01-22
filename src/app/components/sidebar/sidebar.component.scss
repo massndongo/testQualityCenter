@@ -1,14 +1,6 @@
 .bg{
   background-color: rgba(128, 128, 128, 0.267);
 }
-#image-container {
-  transition: background-image 0.3s ease-in-out;
-}
-#image-container:active {
-  background-image: url('../../../assets/aperçu-bleu-menu-icon.png'); /* Chemin de la nouvelle image */
-}
-
-
 
 .active {
   color: #0280e4;

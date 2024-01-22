@@ -11,7 +11,6 @@ export class OverviewComponent implements OnInit {
   ngOnInit() {
     const ventesParMois = this.calculerVentesParMois(Ventes);
     const moisPlusRentable = this.trouverMoisPlusRentable(ventesParMois);
-    console.log(ventesParMois);
 
 
     const moisLabels = this.getMoisLabels();
@@ -55,7 +54,6 @@ export class OverviewComponent implements OnInit {
 
     ventes.forEach((vente) => {
       const mois = vente.date_de_commande.split('-')[2];
-      console.log(mois);
 
 
       if (!ventesParMois[mois]) {
@@ -80,7 +78,6 @@ export class OverviewComponent implements OnInit {
       }
     }
 
-    console.log(moisPlusRentable);
 
 
     return moisPlusRentable;

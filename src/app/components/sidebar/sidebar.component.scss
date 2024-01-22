@@ -4,6 +4,12 @@
 #image-container {
   transition: background-image 0.3s ease-in-out;
 }
-#image-container:hover {
+#image-container:active {
   background-image: url('../../../assets/aperçu-bleu-menu-icon.png'); /* Chemin de la nouvelle image */
+}
+
+
+
+.active {
+  color: #0280e4;
 }

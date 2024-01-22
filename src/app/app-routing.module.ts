@@ -9,9 +9,6 @@ const routes: Routes = [
   {path: "overview", component: OverviewComponent},
   { path: '',   redirectTo: '/overview', pathMatch: 'full' },
   {
-    path: "overview", component: OverviewComponent
-  },
-  {
     path: "ventes", component: VenteComponent
   },
   {

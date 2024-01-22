@@ -1,1 +1,70 @@
-<p>vente works!</p>
+<div class="flex flex-row justify-between">
+  <span class="text-3xl p-2 ">Ventes</span>
+  <img class="m-4 h-8 w-8 flex-shrink-0" src="../../../assets/notification-icon.png" alt="" srcset="">
+
+</div>
+<div class="w-full max-w-full px-3 mt-0 mb-6 lg:mb-0 lg:flex-none">
+  <div class="relative z-20 flex flex-col min-w-0 break-words bg-white border-0 border-solid border-black-125 shadow-soft-xl rounded-2xl bg-clip-border">
+    <div class="flex-auto p-4">
+      <div class="py-4 pr-1 mb-4 from-gray-900 to-slate-800 rounded-xl">
+        <div><dx-data-grid
+          id="gridContainer"
+          [dataSource]="dataSource"
+          [remoteOperations]="false"
+          [allowColumnReordering]="true"
+          [rowAlternationEnabled]="true"
+          [showBorders]="true"
+          [width]="'100%'"
+        >
+          <dxo-paging [pageSize]="10"></dxo-paging>
+          <dxo-pager
+            [showPageSizeSelector]="true"
+            [allowedPageSizes]="[10, 25, 50, 100]"
+          ></dxo-pager>
+          <dxo-search-panel
+            [visible]="true"
+            [highlightCaseSensitive]="true"
+          ></dxo-search-panel>
+          <dxo-group-panel [visible]="true"></dxo-group-panel>
+          <dxo-grouping [autoExpandAll]="false"></dxo-grouping>
+
+          <dxi-column dataField="Ventes" [groupIndex]="0"></dxi-column>
+          <!-- <dxi-column
+            dataField="numero_commande"
+            caption="date_de_commande"
+            dataType="nom_du_vendeur"
+            format="type_vente"
+          ></dxi-column> -->
+          <dxi-column dataField="numero_commande" dataType="number"></dxi-column>
+          <dxi-column dataField="date_de_commande" dataType="string"></dxi-column>
+          <dxi-column dataField="nom_du_vendeur" dataType="string"></dxi-column>
+          <dxi-column dataField="type_vente" dataType="string"></dxi-column>
+
+          <div *dxTemplate="let d of 'discountCellTemplate'">
+            <div class="chart-cell">
+              <dx-bullet
+                [showTarget]="false"
+                [showZeroLevel]="true"
+                [startScaleValue]="0"
+                [endScaleValue]="100"
+                [value]="d.value * 100"
+              >
+                <dxo-size [width]="150" [height]="35"></dxo-size>
+                <!-- <dxo-tooltip
+                  [enabled]="true"
+                  [paddingTopBottom]="2"
+                  [customizeTooltip]="customizeTooltip"
+                >
+                  <dxo-font [size]="18"></dxo-font>
+                </dxo-tooltip> -->
+                <dxo-margin [top]="5" [bottom]="0" [left]="5"></dxo-margin>
+              </dx-bullet>
+            </div>
+          </div>
+        </dx-data-grid>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import { VenteComponent } from './components/vente/vente.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { DxDataGridModule, DxBulletModule, DxTemplateModule,} from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,10 @@ import { MessageService } from 'primeng/api';
     BrowserAnimationsModule,
     AppRoutingModule,
     DxMenuModule,
-    ToastModule
+    ToastModule,
+    DxDataGridModule,
+    DxBulletModule,
+    DxTemplateModule
   ],
   providers: [
     MessageService
